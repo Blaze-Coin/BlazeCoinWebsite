@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>BlazeCoin</title></head>
+  <body>
+    {% with msgs = get_flashed_messages() %}
+     {% if msgs %}
+      <ul>{% for m in msgs %}<li>{{m}}</li>{% endfor %}</ul>
+     {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>
